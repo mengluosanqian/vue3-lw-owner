@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style>
+html body {
+  margin: 0px;
+  bottom: 0px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -44,28 +48,29 @@ export default {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: red;
 }
 .outer-left {
   width: 360px;
   height: 100%;
-  background-color: blue;
+  border-right: solid 1px #dcdfe6;
+}
+.outer-left .el-menu {
+  border-right: solid 0px;
 }
 .outer-right {
   flex: 1;
   height: 100%;
-  background-color: yellow;
+
   display: flex;
   flex-direction: column;
 }
 .inner-top {
   height: 240px;
   width: 100%;
-  background-color: brown;
+  border-bottom: solid 1px #dcdfe6;
 }
 .inner-bottom {
   flex: 1;
   width: 100%;
-  background-color: violet;
 }
 </style>
