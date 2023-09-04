@@ -11,7 +11,7 @@
         </template>
         <el-menu-item index="jsonToExcel">json转化为excel</el-menu-item>
         <el-menu-item index="testIndexedDB">测试indexedDB数据库功能</el-menu-item>
-        <el-menu-item index="1-3">item three</el-menu-item>
+        <el-menu-item index="mediaDevices">屏幕录制</el-menu-item>
         <el-sub-menu index="1-4">
           <template #title>item four</template>
           <el-menu-item index="1-4-1">item one</el-menu-item>

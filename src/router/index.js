@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import jsonToExcel from "../components/menu-component/jsonToExcel";
-import testIndexedDB from "../components/menu-component/testIndexedDB"
+import testIndexedDB from "../components/menu-component/testIndexedDB";
+import mediaDevices from "../components/menu-component/mediaDevices"
 
 
 // vue项目自带路由
@@ -19,6 +20,11 @@ const routes = [
     path: "/testIndexedDB",
     name: "testIndexedDB",
     component: testIndexedDB
+  },
+  {
+    path: "/mediaDevices",
+    name: "mediaDevices",
+    component: mediaDevices
   }
 ];
 
