@@ -1,12 +1,15 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory
+} from "vue-router";
 import jsonToExcel from "../components/menu-component/jsonToExcel";
 import testIndexedDB from "../components/menu-component/testIndexedDB";
 import mediaDevices from "../components/menu-component/mediaDevices";
-import echartsShow from "../components/menu-component/echartsShow"
+import echartsShow from "../components/menu-component/echartsShow";
+import styleRoutes from "../components/menu-component/menu-style-component/router"
 
 // vue项目自带路由
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "jsonToExcel",
     component: jsonToExcel
@@ -35,7 +38,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes: [...routes]
+  routes: [...routes, ...styleRoutes]
 });
 
 export default router;
