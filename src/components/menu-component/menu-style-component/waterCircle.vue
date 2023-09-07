@@ -145,7 +145,7 @@ export default defineComponent({
 }
 .water-level-10::after,
 .water-level-10::before {
-  top: 30%;
+  top: -9%;
 }
 </style>
   
