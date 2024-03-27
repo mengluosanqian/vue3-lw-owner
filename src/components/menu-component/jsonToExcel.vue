@@ -1,14 +1,17 @@
 <template>
   <div class="outer-box">
     <div @click="updateMsg">导出Excel</div>
+    <!-- <div>{{ counterStore.count }}</div> -->
   </div>
 </template>
   
   <script>
 import { defineComponent, ref } from "vue";
 import { downloadXlsx } from "../../utils/xlsx";
+import { useCounter } from "../../stores/counter.js";
 export default defineComponent({
   setup() {
+    const counterStore = useCounter();
     const tableData = ref([1, 2, 3]);
     // 这个要暴露给模板使用，必须 `return` 才可以使用
     function updateMsg() {
@@ -30,6 +33,7 @@ export default defineComponent({
     return {
       updateMsg,
       tableData,
+      counterStore
     };
   },
 });
