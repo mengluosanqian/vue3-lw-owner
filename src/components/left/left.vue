@@ -15,7 +15,7 @@
         <el-menu-item index="echartsShow">echarts展示</el-menu-item>
         <el-sub-menu index="1-4">
           <template #title>特殊样式</template>
-          <el-menu-item index="/menuStyle/waterCircle">水球图</el-menu-item>
+          <el-menu-item index="menuStyle/waterCircle">水球图</el-menu-item>
           <el-menu-item index="waterCircle">进度动画</el-menu-item>
         </el-sub-menu>
       </el-sub-menu>
@@ -36,7 +36,7 @@
 export default {
   methods: {
     handleSelect(index) {
-      this.$router.push(index);
+      this.$router.push(`/main/${index}`);
     },
   },
 };

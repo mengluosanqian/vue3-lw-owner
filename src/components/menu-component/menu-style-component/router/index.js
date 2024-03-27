@@ -1,6 +1,6 @@
  import waterCircle from '../waterCircle.vue'
  const styleRoutes = [{
-     path: "/menuStyle/waterCircle",
+     path: "menuStyle/waterCircle",
      name: "waterCircle",
      component: waterCircle
  }];

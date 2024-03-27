@@ -1,76 +1,59 @@
 <template>
-  <div class="outer-app">
-    <div class="outer-left">
-      <left></left>
-    </div>
-    <div class="outer-right">
-      <div class="inner-top">
-        <top></top>
-      </div>
-      <div class="inner-bottom">
-        <main-component></main-component>
-      </div>
-    </div>
+  <div id="app">
+    <transition name="fade">
+      <!-- <keep-alive include='home,category'> -->
+      <router-view></router-view>
+      <!-- </keep-alive> -->
+    </transition>
   </div>
 </template>
 
 <script>
-import left from "./components/left/left.vue";
-import top from "./components/top/top.vue";
-import mainComponent from "./components/main-component/main-component.vue";
+// import tool from './assets/js/tool.js'
+// import { setCookie,getCookie } from './assets/js/cookie'
+// import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  name: "App",
-  components: {
-    left,
-    top,
-    mainComponent,
+  name: 'app',
+  data () {
+    return {
+      // msg: 'Welcome to Your Vue.js App'
+    }
   },
-};
+  methods:{
+    // ...mapActions(['changeIsLogin']),
+    // checkLogin(){
+    //   //检查是否存在session
+    //   //cookie操作方法在源码里有或者参考网上的即可
+    //   if(!getCookie('userid')){
+    //   //如果没有登录状态则跳转到登录页
+    //   this.$router.push('/login');
+    //   }else{
+    //   //否则跳转到登录后的页面
+    //   // this.$router.push('/');
+    //     this.changeIsLogin();
+    //   }
+    // }
+  },
+  created() {
+  //  this.checkLogin();
+  },
+}
 </script>
 
 <style>
-html body {
-  margin: 0px;
-  bottom: 0px;
+body{
+  /* background: rgb(241, 240, 240); */
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
-  margin: 0px;
-  bottom: 0px;
-}
-.outer-app {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-}
-.outer-left {
-  width: 360px;
+html,body{height:100%}
+#app{
   height: 100%;
-  border-right: solid 1px #dcdfe6;
 }
-.outer-left .el-menu {
-  border-right: solid 0px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.outer-right {
-  flex: 1;
-  height: 100%;
 
-  display: flex;
-  flex-direction: column;
-}
-.inner-top {
-  height: 240px;
-  width: 100%;
-  border-bottom: solid 1px #dcdfe6;
-}
-.inner-bottom {
-  flex: 1;
-  width: 100%;
-}
+
 </style>
