@@ -1,24 +1,26 @@
 <template>
   <div id="outer-setting">
     <div id="login_box">
-    <h2>LOGIN</h2>
-    <div id="input_box">
-      <input type="text" placeholder="请输入用户名" />
+      <h2>LOGIN</h2>
+      <div id="input_box">
+        <input type="text" placeholder="请输入用户名" />
+      </div>
+      <div class="input_box">
+        <input type="password" placeholder="请输入密码" />
+      </div>
+      <el-button @click="login">登录</el-button>
     </div>
-    <div class="input_box">
-      <input type="password" placeholder="请输入密码" />
-    </div>
-    <el-button>登录</el-button>
   </div>
-  </div>
-
 </template>
 
 <script>
 export default {
   name: "login",
-  props: {
-    
+  props: {},
+  methods: {
+    login() {
+      this.$router.replace('/main');
+    },
   },
 };
 </script>
