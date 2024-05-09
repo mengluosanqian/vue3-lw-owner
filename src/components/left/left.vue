@@ -1,10 +1,6 @@
 <template>
-  <div class="hello">
-    <el-menu
-      class="el-menu-vertical-demo"
-      :default-active="$route.path"
-      @select="handleSelect"
-    >
+  <div class="left-outer">
+    <el-menu class="el-menu-vertical-demo" :default-active="$route.path" @select="handleSelect">
       <el-sub-menu index="1">
         <template #title>
           <span>基础功能</span>
@@ -19,8 +15,8 @@
           <el-menu-item index="waterCircle">进度动画</el-menu-item>
         </el-sub-menu>
       </el-sub-menu>
-      <el-menu-item index="2">
-        <span>Navigator Two</span>
+      <el-menu-item index="anchorShow">
+        测试锚点
       </el-menu-item>
       <el-menu-item index="3" disabled>
         <span>Navigator Three</span>
@@ -31,8 +27,8 @@
     </el-menu>
   </div>
 </template>
-  
-  <script>
+
+<script>
 export default {
   methods: {
     handleSelect(index) {
@@ -41,7 +37,9 @@ export default {
   },
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
+.left-outer {
+  background: #304157;
+}
 </style>
-  

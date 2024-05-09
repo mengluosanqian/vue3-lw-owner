@@ -8,10 +8,10 @@
   <script>
 import { defineComponent, ref } from "vue";
 import { downloadXlsx } from "../../utils/xlsx";
-import { useCounter } from "../../stores/counter.js";
+import { useCounter } from "../../stores/counter";
 export default defineComponent({
   setup() {
-    const counterStore = useCounter();
+    // const counterStore = useCounter();
     const tableData = ref([1, 2, 3]);
     // 这个要暴露给模板使用，必须 `return` 才可以使用
     function updateMsg() {
@@ -33,7 +33,7 @@ export default defineComponent({
     return {
       updateMsg,
       tableData,
-      counterStore
+      // counterStore
     };
   },
 });

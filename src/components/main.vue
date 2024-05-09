@@ -8,8 +8,8 @@
         <top></top>
       </div>
       <div class="inner-bottom">
-        <!-- <main-component></main-component> -->
-        <router-view></router-view>
+        <main-component></main-component>
+        <!-- <router-view></router-view> -->
       </div>
     </div>
   </div>

@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "login",
+  name: "login", 
   props: {},
   methods: {
     login() {

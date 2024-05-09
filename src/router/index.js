@@ -7,6 +7,7 @@ import testIndexedDB from "../components/menu-component/testIndexedDB";
 import mediaDevices from "../components/menu-component/mediaDevices";
 import echartsShow from "../components/menu-component/echartsShow";
 import styleRoutes from "../components/menu-component/menu-style-component/router";
+import anchorShow from "../components/menu-component/anchorShow.vue"
 import login from "../components/login/index";
 import main from "../components/main.vue";
 
@@ -39,6 +40,10 @@ const routes = [{
       {
         path: "echartsShow",
         component: echartsShow
+      },
+      {
+        path: "anchorShow",
+        component: anchorShow
       },
       ...styleRoutes
     ]
